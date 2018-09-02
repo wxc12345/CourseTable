@@ -1,0 +1,18 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--no use setting-->
+    <item
+        android:id="@+id/action_weekly"
+        android:title="weekly"
+        android:showAsAction="always"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_weekly"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_add"
+        android:title="@string/action_settings"/>
+</menu>

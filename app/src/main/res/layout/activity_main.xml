@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+			app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+		</android.support.v7.widget.Toolbar>
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/toolbar"
+			android:scaleType="matrix" />
+
+		<TextView
+			android:id="@+id/test_empty"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/courseTableText"
+			android:text="@string/empty"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_text_view_bg" />
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_monday_course"
+			style="@style/courseTableText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/toolbar"
+			android:layout_toRightOf="@id/test_empty"
+			android:background="@drawable/course_text_view_bg"
+			android:text="@string/mon" />
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_tuesday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tue"
+			style="@style/courseTableText"
+			android:layout_toRightOf="@id/test_monday_course"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_text_view_bg" />
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_wednesday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/wen"
+			style="@style/courseTableText"
+			android:layout_toRightOf="@id/test_tuesday_course"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_text_view_bg" />
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_thursday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/thu"
+			style="@style/courseTableText"
+			android:layout_toRightOf="@id/test_wednesday_course"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_text_view_bg" />
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_friday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fri"
+			style="@style/courseTableText"
+			android:layout_toRightOf="@id/test_thursday_course"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_text_view_bg"
+			/>
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_saturday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/sta"
+			style="@style/courseTableText"
+			 android:layout_toRightOf="@id/test_friday_course"
+			android:layout_below="@id/toolbar"
+			 android:background="@drawable/course_text_view_bg"
+			/>
+
+		<TextView
+			android:clickable="true"
+			android:id="@+id/test_sunday_course"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/courseTableText"
+			android:text="@string/sun"
+			android:layout_toRightOf="@id/test_saturday_course"
+			android:layout_below="@id/toolbar"
+			android:background="@drawable/course_table_last_colum"
+			/>
+
+		<ScrollView
+			android:id="@+id/scroll_body"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/test_empty"
+			android:scrollbars="none">
+
+			<RelativeLayout
+				 android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:id="@+id/test_course_rl"
+				 >
+			</RelativeLayout>
+
+		</ScrollView>
+
+		<com.ashokvarma.bottomnavigation.BottomNavigationBar
+			android:layout_alignParentBottom="true"
+			android:layout_gravity="bottom"
+			android:id="@+id/bottom_navigation_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+		</com.ashokvarma.bottomnavigation.BottomNavigationBar>
+
+	</RelativeLayout>
+
+	<android.support.design.widget.NavigationView
+		android:id="@+id/nav_view"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:layout_gravity="start"
+		app:menu="@menu/nav_menu" />
+
+</android.support.v4.widget.DrawerLayout>

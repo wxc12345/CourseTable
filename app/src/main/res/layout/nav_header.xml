@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:padding="10dp"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/nav_back"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="江南大学校科协\n  软件技术中心"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:id="@+id/team"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点我复制群号码:\n600697480"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:id="@+id/QQGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    </RelativeLayout>

@@ -1,0 +1,62 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_one"
+            android:title="第一周" />
+        <item
+            android:id="@+id/nav_two"
+            android:title="第二周" />
+        <item
+            android:id="@+id/nav_three"
+            android:title="第三周" />
+        <item
+            android:id="@+id/nav_four"
+            android:title="第四周" />
+        <item
+            android:id="@+id/nav_five"
+            android:title="第五周" />
+        <item
+            android:id="@+id/nav_six"
+            android:title="第六周" />
+        <item
+            android:id="@+id/nav_seven"
+            android:title="第七周" />
+        <item
+            android:id="@+id/nav_eight"
+            android:title="第八周" />
+        <item
+            android:id="@+id/nav_nine"
+            android:title="第九周" />
+        <item
+            android:id="@+id/nav_ten"
+            android:title="第十周" />
+        <item
+            android:id="@+id/nav_eleven"
+            android:title="第十一周" />
+        <item
+            android:id="@+id/nav_twelve"
+            android:title="第十二周" />
+        <item
+            android:id="@+id/nav_thirteen"
+            android:title="第十三周" />
+        <item
+            android:id="@+id/nav_fourteen"
+            android:title="第十四周" />
+        <item
+            android:id="@+id/nav_fifteen"
+            android:title="第十五周" />
+        <item
+            android:id="@+id/nav_sixteen"
+            android:title="第十六周" />
+        <item
+            android:id="@+id/nav_seventeen"
+            android:title="第十七周" />
+    </group>
+    <group>
+        <item
+            android:title="设置背景"
+            android:id="@+id/background"/>
+    </group>
+</menu>

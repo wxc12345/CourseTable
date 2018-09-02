@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="课程"
+        android:id="@+id/course_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="课程"
+        android:id="@+id/course"
+        android:layout_toRightOf="@id/course_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_name"
+        android:text="上课地点"
+        android:layout_below="@id/course_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="上课地点"
+        android:id="@+id/add"
+        android:layout_below="@id/course_name"
+        android:layout_toRightOf="@id/add_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teacher_name"
+        android:text="授课老师"
+        android:layout_below="@id/add_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/teacher"
+        android:hint="授课老师"
+        android:layout_below="@id/add_name"
+        android:layout_toRightOf="@id/teacher_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起始周"
+        android:id="@+id/first_name"
+        android:layout_below="@id/teacher_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first"
+        android:hint="起始周"
+        android:inputType="number"
+        android:layout_below="@+id/teacher_name"
+        android:layout_toRightOf="@id/first_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_name"
+        android:text="结束周"
+        android:layout_below="@id/first_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/last"
+        android:hint="结束周"
+        android:inputType="number"
+        android:layout_toRightOf="@id/last_name"
+        android:layout_below="@id/first_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单双周"
+        android:layout_below="@id/last_name"
+        android:id="@+id/each_name"/>
+    <EditText
+        android:id="@+id/each"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="单周1/双周0/全周2"
+        android:layout_below="@id/last_name"
+        android:layout_toRightOf="@id/each_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周几"
+        android:id="@+id/week_name"
+        android:layout_below="@id/each_name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="周几"
+        android:inputType="number"
+        android:id="@+id/week"
+        android:layout_below="@id/each_name"
+        android:layout_toRightOf="@id/week_name"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_name"
+        android:layout_below="@id/week_name"
+        android:text="第 节开始"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:inputType="number"
+        android:hint="第 节开始"
+        android:layout_below="@id/week"
+        android:layout_toRightOf="@id/start_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总节数"
+        android:id="@+id/num_name"
+        android:layout_below="@id/start_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/num"
+        android:inputType="number"
+        android:hint="共 节"
+        android:layout_below="@id/start_name"
+        android:layout_toRightOf="@id/num_name"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="提交"
+        android:layout_below="@id/num"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="1234"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"/>
+
+</RelativeLayout>
