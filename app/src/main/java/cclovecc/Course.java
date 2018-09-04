@@ -3,7 +3,7 @@ package cclovecc;
 public class Course {
     public String line;
     int j;
-    int row;
+    int row;//行
     public Course(int j,int i,String content) {
         this.line = content;
         this.j = j;

@@ -29,7 +29,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "each integer,"//
             + "start integer,"//第几节课开始
             + "num integer,"//总共几节课
-            + "name text)";//
+            + "name text)";//课程名字
 
     private Context mContext;
 

@@ -331,7 +331,6 @@ public class LoginActivity extends AppCompatActivity {
         for(int i=0;i<courses.size();i++){
             SO = new spliteOperate(this);
             SO.auto(courses.get(i));
-
         }
     }
 

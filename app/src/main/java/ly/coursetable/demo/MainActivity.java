@@ -3,10 +3,13 @@ package ly.coursetable.demo;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -88,6 +91,7 @@ public class MainActivity extends  AppCompatActivity {
 		//设置课表界面
 		//动态生成12 * maxCourseNum个textview(空白课程网格）
 		eggs();//彩蛋
+		Directions();
 		drawView();
 	}
 
@@ -375,11 +379,11 @@ public class MainActivity extends  AppCompatActivity {
 				Intent intentLogin = new Intent(MainActivity.this,LoginActivity.class);
 				startActivity(intentLogin);
 				break;
-		/*	case R.id.action_switch://暂时弃用
+			/**case R.id.action_switch://暂时弃用
 				Intent intentSwitchTerm = new Intent(MainActivity.this, SwitchTerm.class);
 				startActivity(intentSwitchTerm);
 				break;
-		*/
+			*/
 			case android.R.id.home://DrawerLayout
 				mDrawerLayout.openDrawer(GravityCompat.START);break;
 			default:
@@ -471,6 +475,7 @@ public class MainActivity extends  AppCompatActivity {
 	}
 	class MyListener implements View.OnClickListener{//自定义点击事件，用于周几和日期进行切换
 		//Created by wxc on 2018/7/6.有bug,都会显示当前周的日期，即使你切换了周
+		//bug已经修复
 		@Override
 		public void onClick(View v) {
 			int difference_week ;
@@ -602,7 +607,6 @@ public class MainActivity extends  AppCompatActivity {
 				int first=cursor.getInt(cursor.getColumnIndex("first"));
 				int last=cursor.getInt(cursor.getColumnIndex("last"));
 				int each=cursor.getInt(cursor.getColumnIndex("each"));
-//				Log.d(TAG,""+name+address+each);
 				if(NoWeek>=first&&NoWeek<=last&&(NoEach==each||each==2)) {
 					newCourse(name, address, week, start, num, id);
 				}
@@ -634,5 +638,38 @@ public class MainActivity extends  AppCompatActivity {
 				}
 			}
 		});
+	}
+
+	//
+	void Directions() {
+		AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+		dialog.setTitle("使用说明");
+		dialog.setMessage("第一次使用请连接校园网（可在食堂，教学楼等处打开wifi，连接Aij即可）\n" +
+				"第一次使用需要登录，请点击右上角靠中间的按钮进行登录\n" +
+				"账号为学号，密码为身份证全部，账号与密码仅用于登录教务系统\n" +
+				"大学生科技协会 软件技术中心出品\n");
+		dialog.setCancelable(true);
+		dialog.setPositiveButton("知道了,以后不再显示", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+			}
+		});
+		dialog.setNegativeButton("退出", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				onDestroy();
+			}
+		});
+
+		SharedPreferences preferences = getSharedPreferences("First", MODE_PRIVATE);
+		boolean isFirst = preferences.getBoolean("isFirst",false);
+		if (!isFirst) {
+			dialog.show();
+			SharedPreferences.Editor editor = getSharedPreferences("First", MODE_PRIVATE).edit();
+			editor.putBoolean("isFirst", true);
+			editor.apply();
+		} else {
+
+		}
 	}
 }
